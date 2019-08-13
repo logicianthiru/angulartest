@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  favourite: boolean = false;
+  countries: boolean = false;
+  recommended: boolean = false;
+
   constructor() { }
 
   ngOnInit() {

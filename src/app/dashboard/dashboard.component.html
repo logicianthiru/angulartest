@@ -1,1 +1,34 @@
-<app-header></app-header>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode='side' class="sidenav">
+        <div class="logo">
+            <h1>Musix</h1>
+        </div>
+
+        <div class="navigation-section">
+
+            <div class="navlink" (click)="favourite = true; countries = false; recommended = false">
+                <i class="far fa-heart"></i>
+                <small class="desc">Favourites</small>
+            </div>
+
+            <div class="navlink" (click)="countries = true; favourite = false; recommended = false">
+                <i class="fas fa-globe-americas"></i>
+                <small class="desc">Countries</small>
+            </div>
+
+            <div class="navlink" (click)="recommended = true; favourite = false; countries = false">
+                <i class="far fa-thumbs-up"></i>
+                <small class="desc">Recommended</small>
+            </div>
+        </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <span (click)="sidenav.toggle()"><i class="fas fa-bars menu-icon"></i></span>
+        <!-- <button (click) = "favourite = !favourite">Favourite</button> -->
+        <app-favourite *ngIf="favourite"></app-favourite>
+        <app-countries *ngIf="countries"></app-countries>
+        <app-recommended *ngIf="recommended"></app-recommended>
+    </mat-sidenav-content>
+</mat-sidenav-container>

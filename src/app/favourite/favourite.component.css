@@ -1,0 +1,12 @@
+#Favorite {
+    margin: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 20%;
+    background: #fff;
+    margin: 2em;
+    padding: 1em;
+}
