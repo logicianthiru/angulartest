@@ -15,6 +15,10 @@
     width: 15%;
 }
 
+.mat-sidenav-content {
+    background: #424242;
+}
+
 .logo {
     color: #039BE5;
     font-family: 'Lobster', cursive;
